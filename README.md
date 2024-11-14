@@ -10,7 +10,9 @@
 
 </div>
 
-**A powerful RAG-powered chatbot for technical documents.** Chat with your documentation using state-of-the-art Retrieval-Augmented Generation (RAG) and local LLMs.
+**RagDocs** is a cutting-edge open-source solution that revolutionizes how you interact with technical documentation. By combining the power of **local LLMs** with state-of-the-art **Retrieval-Augmented Generation (RAG)**, developers can instantly get accurate answers from their documentation without any API costs.
+
+Say goodbye to expensive API calls and privacy concerns. With **RagDocs**, all your documentation stays private while providing ChatGPT-like interactions. Built with Milvus vector search and Next.js, it's production-ready and easy to deploy. Experience the future of documentation search with complete data privacy and no usage fees.
 
 https://github.com/user-attachments/assets/24c25726-6599-4be5-9fa5-c7b8af6a4c55
 
