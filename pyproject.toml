@@ -6,6 +6,10 @@ authors = ["Alexis Balayre <alexis@balayre.com>"]
 readme = "README.md"
 keywords = ["rag", "documentation", "chatbot", "vector-database", "llm", "local-llm", "milvus"]
 
+packages = [
+    { include = "ragdocs_api" } 
+]
+
 
 [tool.poetry.dependencies]
 python = "^3.12"
