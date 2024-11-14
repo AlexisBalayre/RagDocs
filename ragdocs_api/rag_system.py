@@ -459,8 +459,7 @@ class RagSystem:
             organized_results = defaultdict(list)
             for hits in results:
                 for hit in hits:
-                    # Simplified score conversion - removed debug logging
-                    normalized_score = 1 - (hit.score**2 / 4)  # Optimized computation
+                    normalized_score = 1 - (hit.score**2 / 4)  # Normalize score to 0-1
 
                     # Get entity data efficiently
                     entity = hit.entity
@@ -508,12 +507,6 @@ class RagSystem:
                 - With both filters: "technology in ['milvus'] && category in ['deployment']"
                 - With one filter: "technology in ['milvus']"
                 - With no filters: None
-
-        Example:
-            >>> rag._build_filter_expression(['milvus'], ['deployment'])
-            "technology in ['milvus'] && category in ['deployment']"
-            >>> rag._build_filter_expression(None, ['security'])
-            "category in ['security']"
         """
         expr_parts = []
 
@@ -535,11 +528,7 @@ class RagSystem:
         Returns:
             Set[str]: A set containing the names of all available technologies.
                 Empty set if no technologies have been processed yet.
-
-        Example:
-            >>> rag.get_available_technologies()
-            {'milvus', 'qdrant', 'weaviate'}
-
+                
         Note:
             The set is updated automatically when new technologies are added
             via the update_documentation method.
@@ -562,9 +551,5 @@ class RagSystem:
                 - scalability: Scaling and distribution information
                 - security: Security and authentication content
                 - integration: Integration and connectivity details
-
-        Example:
-            >>> rag.get_categories()
-            {'deployment', 'performance', 'features', 'scalability', 'security', 'integration'}
         """
         return set(self.category_keywords.keys())
