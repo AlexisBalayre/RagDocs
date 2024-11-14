@@ -12,6 +12,8 @@
 
 A powerful RAG-powered chatbot for technical documentation. Chat with your documentation using state-of-the-art retrieval augmented generation and local LLMs.
 
+https://github.com/user-attachments/assets/24c25726-6599-4be5-9fa5-c7b8af6a4c55
+
 ## 🌟 Features
 
 - 🤖 Chat interface for technical documentation
