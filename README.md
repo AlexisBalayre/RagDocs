@@ -36,9 +36,9 @@ ragdocs/
 │   ├── markdown_processor.py# Markdown processing
 │   └── rag_system.py       # Core RAG implementation
 ├── data/                # Documentation storage
-│   ├── milvus_docs/    
-│   ├── qdrant_docs/    
-│   └── weaviate_docs/  
+│   ├── milvus_docs/
+│   ├── qdrant_docs/
+│   └── weaviate_docs/
 └── frontend/           # Next.js frontend
     └── src/            # Frontend source code
 ```
@@ -60,12 +60,14 @@ ragdocs/
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/AlexisBalayre/RagDocs.git
 cd ragdocs
 ```
 
 2. Install Python dependencies:
+
 ```bash
 # Install poetry if you haven't already
 curl -sSL https://install.python-poetry.org | python3 -
@@ -83,18 +85,21 @@ poetry install
 ```
 
 3. Install frontend dependencies:
+
 ```bash
 cd frontend
 yarn
 ```
 
 4. Set up environment variables:
+
 ```bash
 cp example.env.local .env.local
 # Edit .env.local with your configuration
 ```
 
 5. Start Milvus (standalone):
+
 ```bash
 # Navigate to milvus directory
 cd milvus
@@ -107,11 +112,13 @@ bash standalone_embed.sh start
 ```
 
 6. Start the backend:
+
 ```bash
 poetry run uvicorn api.conversation_api:app --reload
 ```
 
 7. Start the frontend:
+
 ```bash
 cd frontend
 yarn dev
@@ -122,23 +129,6 @@ yarn dev
 1. Add your documentation to the respective folders in `data/`
 2. Start chatting with your documentation through the web interface
 3. Use the comparison feature to analyze different tech stacks
-
-### API Examples
-
-```python
-from ragdocs import ComparativeMarkdownRAG
-
-# Initialize the RAG system
-rag = ComparativeMarkdownRAG()
-
-# Search across documentation
-results = rag.search(
-    query="How to handle scalability?",
-    technologies=["milvus"],
-    categories=["scalability", "deployment"],
-    top_k=3
-)
-```
 
 ## 🔧 Configuration
 
@@ -176,4 +166,3 @@ Special thanks to the Vercel team for providing the AI Chatbot template that ser
 ## ⭐ Support
 
 If you find this project useful, please consider giving it a star ⭐️!
-
