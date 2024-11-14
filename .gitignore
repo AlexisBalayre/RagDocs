@@ -2,3 +2,4 @@
 logs/
 conversations/
 .rag_cache.json
+.DS_Store
