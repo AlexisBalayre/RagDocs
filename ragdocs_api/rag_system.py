@@ -25,9 +25,9 @@ import re
 import logging
 from collections import defaultdict
 
-from file_tracker import FileTracker
-from logger_config import setup_logger
-from markdown_processor import MarkdownProcessor
+from ragdocs_api.file_tracker import FileTracker
+from ragdocs_api.logger_config import setup_logger
+from ragdocs_api.markdown_processor import MarkdownProcessor
 
 
 @dataclass

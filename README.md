@@ -114,7 +114,7 @@ bash standalone_embed.sh start
 6. Start the backend:
 
 ```bash
-poetry run uvicorn api.conversation_api:app --reload
+poetry run uvicorn ragdocs_api.conversation_api:app --reload
 ```
 
 7. Start the frontend:

@@ -22,9 +22,9 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 import uvicorn
 from contextlib import contextmanager
 
-from logger_config import setup_logger
-from rag_system import RagSystem
-from llm_provider import LLMProvider, OllamaConfig, LLMManager
+from ragdocs_api.logger_config import setup_logger
+from ragdocs_api.rag_system import RagSystem
+from ragdocs_api.llm_provider import LLMProvider, OllamaConfig, LLMManager
 
 # Configure logger
 logger = setup_logger(name="conversation_api", log_file="conversation_api.log")
