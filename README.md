@@ -29,17 +29,19 @@ https://github.com/user-attachments/assets/24c25726-6599-4be5-9fa5-c7b8af6a4c55
 
 ```
 ragdocs/
-├── api/                 # FastAPI backend
+├── data/                         # Documentation storage
+│   ├── milvus_docs/ # Milvus documentation
+│   ├── qdrant_docs/ # Qdrant documentation
+│   └── weaviate_docs/ # Weaviate documentation
+├── milvus/                       # Milvus standalone setup
+│   └── standalone_embed.sh       # Milvus standalone script
+├── ragdocs_api/                 # FastAPI backend
 │   ├── conversation_api.py  # Chat API endpoints
 │   ├── file_tracker.py     # Document change tracking
 │   ├── llm_provider.py     # LLM integration (Ollama)
 │   ├── markdown_processor.py# Markdown processing
 │   └── rag_system.py       # Core RAG implementation
-├── data/                # Documentation storage
-│   ├── milvus_docs/
-│   ├── qdrant_docs/
-│   └── weaviate_docs/
-└── frontend/           # Next.js frontend
+└── ragdocs_frontend/           # Next.js frontend
     └── src/            # Frontend source code
 ```
 
@@ -75,6 +77,9 @@ curl -sSL https://install.python-poetry.org | python3 -
 # Install dependencies
 poetry install
 
+# Activate the virtual environment
+poetry shell
+
 # Note: This project uses specific versions of many packages for compatibility.
 # Key dependencies include:
 # - llama-index: 0.11.22
@@ -87,7 +92,7 @@ poetry install
 3. Install frontend dependencies:
 
 ```bash
-cd frontend
+cd ragdocs_frontend
 yarn
 ```
 
@@ -120,7 +125,7 @@ poetry run uvicorn ragdocs_api.conversation_api:app --reload
 7. Start the frontend:
 
 ```bash
-cd frontend
+cd ragdocs_frontend
 yarn dev
 ```
 
