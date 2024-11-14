@@ -63,7 +63,7 @@ ragdocs/
 
 ```bash
 git clone https://github.com/AlexisBalayre/RagDocs.git
-cd ragdocs
+cd RagDocs
 ```
 
 2. Install Python dependencies:
