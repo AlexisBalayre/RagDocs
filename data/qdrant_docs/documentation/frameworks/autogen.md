@@ -16,7 +16,7 @@ With the Autogen-Qdrant integration, you can use the `QdrantRetrieveUserProxyAge
 ## Installation
 
 ```bash
-pip install "pyautogen[retrievechat]" "qdrant_client[fastembed]"
+pip install "ag2[retrievechat]" "qdrant_client[fastembed]"
 ```
 
 ## Usage
